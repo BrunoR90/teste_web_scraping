@@ -1,0 +1,25 @@
+
+
+services:
+  postgres:
+    image: postgres:13
+    container_name: postgres_db
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: operadoras_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./scripts:/docker-entrypoint-initdb.d
+
+  postgres_client:
+    image: postgres:13
+    container_name: postgres_client
+    depends_on:
+      - postgres
+    entrypoint: ["sleep", "infinity"]
+
+volumes:
+  postgres_data:
