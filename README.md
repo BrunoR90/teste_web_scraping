@@ -1,6 +1,6 @@
 # Teste Web Scraping
 
-Este projeto tem como objetivo baixar, processar e analisar dados financeiros relacionados a operadoras de saúde no Brasil. A aplicação utiliza Python para web scraping e PostgreSQL para armazenamento e análise dos dados.
+Este projeto tem como objetivo baixar, processar e analisar dados financeiros relacionados a operadoras de saúde no Brasil. A aplicação utiliza Python na versão 3.12.4 para web scraping e PostgreSQL para armazenamento e análise dos dados.
 
 ## Funcionalidades
 
